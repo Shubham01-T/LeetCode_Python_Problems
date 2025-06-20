@@ -1,0 +1,22 @@
+
+
+def divideArray(nums):
+    counts = {}
+
+    # Step 1: Count how many times each number appears
+    for num in nums:
+        if num in counts:
+            counts[num] += 1
+        else:
+            counts[num] = 1
+
+    # Step 2: Check if each count is even
+    for count in counts.values():
+        if count % 2 != 0:
+            return False  # If any number appears an odd number of times, it's impossible
+   
+    return True  # All numbers can be paired
+   
+
+
+
